@@ -1,8 +1,17 @@
 html, body, .item-card {
   height: 100%; }
+  html #itemsList, body #itemsList, .item-card #itemsList {
+    height: 100%;
+    max-width: 500px;
+    margin: auto; }
+    html #itemsList .carousel-inner, body #itemsList .carousel-inner, .item-card #itemsList .carousel-inner {
+      height: 100%; }
+      html #itemsList .carousel-inner > .item, body #itemsList .carousel-inner > .item, .item-card #itemsList .carousel-inner > .item {
+        height: 100%; }
+    html #itemsList .carousel-control, body #itemsList .carousel-control, .item-card #itemsList .carousel-control {
+      background-image: none !important; }
   html img, body img, .item-card img {
-    width: 100%;
-    height: 40%; }
+    width: 100%; }
   html .item-details, body .item-details, .item-card .item-details {
     height: 59%;
     padding: 1.25rem;
