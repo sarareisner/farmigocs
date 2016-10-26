@@ -1,19 +1,5 @@
 html, body, .item-card {
     height: 100%;
-    #itemsList {
-        height: 100%;
-        max-width: 500px;
-        margin: auto;
-        .carousel-inner {
-            height: 100%;
-            & > .item {
-                height: 100%;
-            }
-        }
-        .carousel-control {
-                background-image: none !important;
-            }
-    }
     img {
         width: 100%;
     }
@@ -23,6 +9,9 @@ html, body, .item-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        & > div:first-child {
+            min-height: 130px;
+        }
         .card-text {
             color: #A6A8A7;
         }
@@ -45,7 +34,7 @@ html, body, .item-card {
                 }
             }
             & > span:last-child {
-               font-size: 19px;
+               font-size: 16px;
                color: #A6A8A7;
             }
         }
@@ -64,3 +53,18 @@ html, body, .item-card {
         
     }
 }
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+
+   

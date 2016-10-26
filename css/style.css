@@ -1,15 +1,5 @@
 html, body, .item-card {
   height: 100%; }
-  html #itemsList, body #itemsList, .item-card #itemsList {
-    height: 100%;
-    max-width: 500px;
-    margin: auto; }
-    html #itemsList .carousel-inner, body #itemsList .carousel-inner, .item-card #itemsList .carousel-inner {
-      height: 100%; }
-      html #itemsList .carousel-inner > .item, body #itemsList .carousel-inner > .item, .item-card #itemsList .carousel-inner > .item {
-        height: 100%; }
-    html #itemsList .carousel-control, body #itemsList .carousel-control, .item-card #itemsList .carousel-control {
-      background-image: none !important; }
   html img, body img, .item-card img {
     width: 100%; }
   html .item-details, body .item-details, .item-card .item-details {
@@ -18,6 +8,8 @@ html, body, .item-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    html .item-details > div:first-child, body .item-details > div:first-child, .item-card .item-details > div:first-child {
+      min-height: 130px; }
     html .item-details .card-text, body .item-details .card-text, .item-card .item-details .card-text {
       color: #A6A8A7; }
     html .item-details .price, body .item-details .price, .item-card .item-details .price {
@@ -35,7 +27,7 @@ html, body, .item-card {
         html .item-details .price > span:first-child > span:last-child, body .item-details .price > span:first-child > span:last-child, .item-card .item-details .price > span:first-child > span:last-child {
           padding: 0px 3px; }
       html .item-details .price > span:last-child, body .item-details .price > span:last-child, .item-card .item-details .price > span:last-child {
-        font-size: 19px;
+        font-size: 16px;
         color: #A6A8A7; }
     html .item-details .quantity, body .item-details .quantity, .item-card .item-details .quantity {
       display: flex;
@@ -46,3 +38,15 @@ html, body, .item-card {
         font-size: 2em; }
       html .item-details .quantity span, body .item-details .quantity span, .item-card .item-details .quantity span {
         font-size: 1.8em; }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap; }
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; }
